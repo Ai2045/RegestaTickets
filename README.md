@@ -1,25 +1,11 @@
-# Getting Started
-
-Welcome to your new project.
-
-It contains these folders and files, following our recommended project layout:
-
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+situazione progetto regesta ticket 07/11/2023
+funzionale il modello oDatav4
+nella schermata principale, c'è una tabella che visualizza le informazioni del modello oDatav4 (GET funziona)
+filtri funzionano
 
 
-## Next Steps
+non funziona la creazione di ticket (non esiste la view; il controller incompleto)
+non funziona la modifica di ticket (non completo la view; il controller incompleto)
+non ha ancora un design user friendly (riprogettare la view)
 
-- Open a new terminal and run `cds watch` 
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
+collegare al database (il passo successivo)
