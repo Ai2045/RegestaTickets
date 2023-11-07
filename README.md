@@ -10,7 +10,9 @@
 - Non esiste una view per la creazione di ticket, e il controller associato è incompleto.
 - La modifica dei ticket non è ancora possibile in quanto la view e il controller associati sono incompleti.
 - La view attuale non ha un design user-friendly e necessita di una riprogettazione.
+- stessa view sia per inserimento (modifica se l'id esiste, se no lo crea)
+- aggiungere cancellazione
 
 ### Prossimi passi
 
-- Collegare il progetto al database per abilitare la memorizzazione e la gestione dei ticket.
+- Collegare il progetto al database per abilitare la memorizzazione e la gestione dei ticket
