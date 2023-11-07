@@ -1,7 +1,5 @@
 # Situazione Progetto Regesta Ticket - 07/11/2023
 
-## Modello oDatav4
-
 ### Funzionalità attuali
 
 - Nella schermata principale, c'è una tabella che visualizza le informazioni del modello oDatav4 (GET funziona).
