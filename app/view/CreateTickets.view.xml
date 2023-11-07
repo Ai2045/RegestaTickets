@@ -1,0 +1,316 @@
+<mvc:View
+    controllerName="regestaTickets.controller.CreateTickets"
+	height="100%"
+	width="100%"
+	xmlns:l="sap.ui.layout"
+	xmlns:core="sap.ui.core"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m">
+    <ScrollContainer
+    	height="100%"
+		width="100%"
+		vertical="true"
+		focusable="true">
+        <FlexBox height="100px">
+            <Button icon="sap-icon://add"
+            class="sapUiSmallMargin"
+            press=".createTicket"/>
+        </FlexBox>
+        <FlexBox height="100px" alignItems="Start" justifyContent="End">
+            <Button icon="sap-icon://delete" class="sapUiSmallMargin"
+            press=".delete"/>
+        </FlexBox>
+        <content>
+        <VBox>
+            <Text text="ID" 
+            key="id"/>
+        </VBox>
+        </content>
+        <Input
+            value="{/ticket/ID}"
+            type="Number"
+        />
+
+        <content>
+        <VBox>
+            <Text text="Data" />
+        </VBox>
+        </content>
+        <Input
+            type="Date"
+            value="{/ticket/insertDate}"
+            width="120px"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="utente" />
+        </VBox>
+        </content>
+        <Input
+            value="{/ticket/utente}"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="ID Parent" />
+        </VBox>
+        </content>
+        <Input
+            value="{ticket/IDParent}"
+            type="Number"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="External ID" />
+        </VBox>
+        </content>
+        <Input
+            value="{ticket/externalID}"
+            type="Number"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Ordine SAP" />
+        </VBox>
+        </content>
+        <Select id="Select-ordineSap">
+            <core:Item key="ordine 1" text="Ordine 1" />
+            <core:Item key="ordine 2" text="Ordine 2" />
+        </Select>
+
+
+        <content>
+        <VBox>
+            <Text text="Cliente" />
+        </VBox>
+        </content>
+        <Select id="Select-clienti">
+            <core:Item key="1" text="Cliente 1" />
+            <core:Item key="2" text="Cliente 2" />
+        </Select>
+
+
+        <content>
+        <VBox>
+            <Text text="Commessa" />
+        </VBox>
+        </content>
+        <Select id="Select-commessa">
+            <core:Item key="1" text="Commessa 1" />
+            <core:Item key="2" text="Commessa 2" />
+        </Select>
+
+
+        <content>
+        <VBox>
+            <Text text="Titolo" />
+        </VBox>
+        </content>
+        <Input
+            value="{ticket/titolo}"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Area" />
+        </VBox>
+        </content>
+        <Select id="Select-areaFunzionale">
+            <core:Item key="area 1" text="Area 1" />
+            <core:Item key="area 2" text="Area 2" />
+        </Select>
+
+
+            <content>
+            <VBox>
+                <Text text="Testo" />
+            </VBox>
+            </content>
+            <Input
+                value="{ticket/testo}"
+            />
+            
+            <content>
+            <VBox>
+                <Text text="Tipologia" />
+            </VBox>
+            </content>
+            <Select id="Select-tipologia">
+                <core:Item key="1" text="Tipologia 1" />
+                <core:Item key="2" text="Tipologia 2" />
+            </Select>
+
+
+        <content>
+        <VBox>
+            <Text text="Stato" />
+        </VBox>
+        </content>
+        <Select id="Select-status">
+            <core:Item key="1" text="Da Stimare" />
+            <core:Item key="2" text="Aperto" />
+            <core:Item key="3" text="Da Assegnare" />
+            <core:Item key="4" text="Attesa Cliente" />
+            <core:Item key="5" text="Assegnato a ME" />
+        </Select>
+
+            
+            <content>
+            <VBox>
+                <Text text="Urgenza" />
+            </VBox>
+            </content>
+            <Select id="Select-urgenza">
+                <core:Item key="NO" text="Normale" />
+                <core:Item key="UR" text="Urgente" />
+                <core:Item key="KO" text="KO" />
+            </Select>
+
+        
+        <content>
+        <VBox>
+            <Text text="Bug Fixing" />
+        </VBox>
+        </content>
+        <CheckBox
+            selected=""
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Change Request" />
+        </VBox>
+        </content>
+        <CheckBox
+            selected=""
+        />
+
+        
+        <content>
+        <VBox>
+            <Text text="Priorità" />
+        </VBox>
+        </content>
+        <StepInput
+            value="0"
+            min="0"
+            max="100000"
+            step="1"
+            width="120px"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Assegnabile a" />
+        </VBox>
+        </content>
+        <Input
+            value=""
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Visibile Cliente" />
+        </VBox>
+        </content>
+        <CheckBox
+            selected=""
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Data Richiesta" />
+        </VBox>
+        </content>
+        <Input
+            type="Date"
+            value="{/ticket/dataConsegnaRichiesta}"
+            width="120px"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Giorni Stimati" />
+        </VBox>
+        </content>
+        <StepInput
+            id="Input-giorniStima"
+            min="0"
+            max="100000"
+            step="1"
+            width="120px"
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Supporto Funzionale" />
+        </VBox>
+        </content>
+        <Input
+            value=""
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Funz" />
+        </VBox>
+        </content>
+        <CheckBox
+            selected=""
+        />
+
+
+        <content>
+        <VBox>
+            <Text text="Giorni Previsti Funz" />
+        </VBox>
+        </content>
+        <StepInput
+            value="0"
+            min="0"
+            max="100000"
+            step="1"
+            width="120px"
+        />
+
+        
+        <content>
+        <VBox>
+            <Text text="Dev"/>
+        </VBox>
+        </content>
+        <CheckBox
+            selected=""
+        />
+
+
+            <content>
+            <VBox>
+                <Text text="Giorni Previsti Dev" />
+            </VBox>
+            </content>    
+            <StepInput
+                value="0"
+                min="0"
+                max="100000"
+                step="1"
+                width="120px"
+            />
+        
+    </ScrollContainer>
+</mvc:View>

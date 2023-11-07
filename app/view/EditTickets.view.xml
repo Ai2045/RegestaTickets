@@ -1,0 +1,6 @@
+<mvc:View
+   controllerName="regestaTickets.controller.EditTickets"
+   xmlns="sap.m"
+   xmlns:mvc="sap.ui.core.mvc">
+    <Text text="edit"/>
+</mvc:View>
