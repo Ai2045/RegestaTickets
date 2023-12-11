@@ -1,6 +1,40 @@
 <mvc:View
-   controllerName="regestaTickets.controller.EditTickets"
-   xmlns="sap.m"
-   xmlns:mvc="sap.ui.core.mvc">
-    <Text text="edit"/>
+  xmlns:mvc="sap.ui.core.mvc"
+  xmlns="sap.m"
+  controllerName="regestaTickets.controller.EditTickets"
+  xmlns:layout="sap.ui.layout">
+
+  <VBox class="sapUiContentPadding">
+    <Label text="ID"/>
+    <Text text="{editTicket>/ID}"/>
+
+    <Label text="Insert Date"/>
+    <Text text="{editTicket>/insertDate}"/>
+
+    <Label text="User"/>
+    <Input value="{editTicket>/utente}" />
+
+
+    <Label text="Title"/>
+    <Input value="{editTicket>/titolo}" />
+
+    <Label text="Text"/>
+    <TextArea value="{editTicket>/testo}" />
+
+
+
+    <Label text="Assigned To"/>
+    <Input value="{editTicket>/assegnatoA}" />
+
+    <Label text="Estimated Days"/>
+    <Input value="{editTicket>/giorniStima}" />
+
+    <Label text="Delivery Date"/>
+    <DatePicker value="{editTicket>/dataConsegnaRichiesta}" />
+
+
+    <!-- Save Button -->
+    <Button text="Save" press="onSave" />
+
+  </VBox>
 </mvc:View>
