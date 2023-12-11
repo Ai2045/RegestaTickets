@@ -1,25 +1,18 @@
-# Getting Started
+# Situazione Progetto Regesta Ticket - 07/11/2023
 
-Welcome to your new project.
+### Funzionalità attuali
 
-It contains these folders and files, following our recommended project layout:
+- Nella schermata principale, c'è una tabella che visualizza le informazioni del modello oDatav4 (GET funziona).
+- I filtri funzionano come previsto.
 
-File or Folder | Purpose
----------|----------
-`app/` | content for UI frontends goes here
-`db/` | your domain models and data go here
-`srv/` | your service models and code go here
-`package.json` | project metadata and configuration
-`readme.md` | this getting started guide
+### Problemi attuali
 
+- Non esiste una view per la creazione di ticket, e il controller associato è incompleto.
+- La modifica dei ticket non è ancora possibile in quanto la view e il controller associati sono incompleti.
+- La view attuale non ha un design user-friendly e necessita di una riprogettazione.
+- stessa view sia per inserimento e modifica (modifica se l'id esiste, se no lo crea)
+- aggiungere cancellazione
 
-## Next Steps
+### Prossimi passi
 
-- Open a new terminal and run `cds watch` 
-- (in VS Code simply choose _**Terminal** > Run Task > cds watch_)
-- Start adding content, for example, a [db/schema.cds](db/schema.cds).
-
-
-## Learn More
-
-Learn more at https://cap.cloud.sap/docs/get-started/.
+- Collegare il progetto al database per abilitare la memorizzazione e la gestione dei ticket
